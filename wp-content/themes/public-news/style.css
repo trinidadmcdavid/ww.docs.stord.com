@@ -1,0 +1,334 @@
+/*!
+Theme Name: Public News
+Theme URI: https://adorethemes.com/downloads/public-news/
+Author: Adore Themes
+Author URI: https://adorethemes.com/
+Description: Public News is the the child theme of Collective News, Which is perfect WordPress theme for dynamic news, newspapers, magazine, publishers, blogs, editors, online and gaming magazines, newsportals,personal blogs, newspaper, publishing or review siteand any creative websites. The modern and professional design is easy and quick to set up, especially with pre-built demo. The theme is fully widgetized & customize based theme, so users can manage the content by using widgets and live WordPress customizer. It is fully responsive and works flawlessly on all types of devices like mobiles, tablets, laptops, and computers. It is a simple, easy-to-use, modern and creative, user-friendly WordPress magazine theme. The codes included in the theme are made SEO-friendly so that people can easily notice you and you get more visitors. The clean and secure HTML codes of this theme make your website function smoothly on several platforms and as these are optimized codes, your website will have a faster page load time to load quickly. Live preview : https://demo.adorethemes.com/public-news/
+Version: 1.0.2
+Requires at least: 5.0
+Requires PHP: 5.6
+Tested up to: 6.2
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Template: collective-news
+Text Domain: public-news
+Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, left-sidebar, right-sidebar, blog, one-column, portfolio, photography, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Public News is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+
+/* Root
+========================================================================== */
+:root {
+	--primary-color: #706fd3;
+}
+
+/* Root
+========================================================================== */
+
+/* Banner Slider Section
+--------------------------------------------- */
+
+.main-banner-section .post-item.overlay-post.slider-item {
+	height: auto;
+	min-height: 220px;
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+}
+
+.main-banner-section .slider-item .blog-banner {
+	position: absolute;
+	bottom: 0px;
+	padding: 20px;
+	z-index: 2;
+	left: 0;
+}
+
+.main-banner-section .post-item.slider-item .post-item-content .entry-meta {
+	margin: 0;
+}
+
+.main-banner-section.style-1 .banner-slider {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.main-banner-section.style-1 .banner-slider .post-item:first-child {
+	grid-row: span 2;
+}
+
+.main-banner-section.style-1 .post-item.overlay-post.slider-item:first-child .entry-title {
+	font-size: var(--font-size-md);
+}
+
+@media (max-width: 1023px) {
+	.main-banner-section.style-1 .banner-slider {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 767px) {
+	.main-banner-section.style-1 .banner-slider {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.main-banner-section.style-1 .banner-slider .post-item-outer:first-child {
+		grid-row: span 1;
+	}
+}
+
+/* End Banner Slider Section
+--------------------------------------------- */
+
+/* News ticker counter Section
+--------------------------------------------- */
+
+.dispay-number .news-ticker-section-wrapper ul.newsticker li .newsticker-outer .newsticker-image .ticker-no {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	font-weight: 700;
+	display: flex;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--font-size-sm);
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* End Banner Slider Section
+--------------------------------------------- */
+
+/* Express List widget
+--------------------------------------------- */
+/* express list widget start */
+.express-list-widget .express-list-widget-wrapper {
+	display: grid;
+	gap: 20px;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.express-list-widget .express-list-widget-wrapper .post-item:first-child {
+	grid-column: span 2;
+}
+.express-list-widget .express-list-widget-wrapper .post-item.post-grid .post-item-image img{
+	aspect-ratio: 1/0.5;
+}
+
+#secondary .express-list-widget .post-item.post-list:first-child .post-item-content,
+.site-footer .express-list-widget .post-item.post-list:first-child .post-item-content,
+.secondary-widgets-area .express-list-widget .post-item.post-list:first-child .post-item-content {
+	padding-inline: 0;
+	padding-block-end: 0;
+}
+
+#secondary .posts-tabs-widget .post-item .post-item-image,
+.site-footer .posts-tabs-widget .post-item .post-item-image,
+.secondary-widgets-area .posts-tabs-widget .post-item .post-item-image,
+.express-list-widget .post-item:not(:first-child) .post-item-image {
+	flex: 0 0 25%;
+	max-width: 25%;
+}
+
+#secondary .posts-tabs-widget .post-item .post-item-content,
+.site-footer .posts-tabs-widget .post-item .post-item-content,
+.secondary-widgets-area .posts-tabs-widget .post-item .post-item-content,
+.express-list-widget .post-item:not(:first-child) .post-item-content {
+	padding-block: 0;
+	padding-inline-end: 10px;
+	padding-inline-start: 10px;
+}
+
+#secondary .posts-tabs-widget .post-item .post-item-content .entry-title,
+.site-footer .posts-tabs-widget .post-item .post-item-content .entry-title,
+.secondary-widgets-area .posts-tabs-widget .post-item .post-item-content .entry-title,
+.express-list-widget .post-item:not(:first-child) .post-item-content .entry-title {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: var(--font-size-sm);
+}
+
+#secondary .posts-tabs-widget .post-item .post-item-content .entry-meta,
+.site-footer .posts-tabs-widget .post-item .post-item-content .entry-meta,
+.secondary-widgets-area .posts-tabs-widget .post-item .post-item-content .entry-meta,
+.express-list-widget .post-item:not(:first-child) .post-item-content .entry-meta {
+	margin: 0;
+}
+
+#secondary .posts-tabs-widget .post-item .post-item-content .post-categories,
+#secondary .posts-tabs-widget .post-item .post-item-content .post-exerpt,
+#secondary .posts-tabs-widget .post-item .post-item-content .post-btn,
+.site-footer .posts-tabs-widget .post-item .post-item-content .post-categories,
+.site-footer .posts-tabs-widget .post-item .post-item-content .post-exerpt,
+.site-footer .posts-tabs-widget .post-item .post-item-content .post-btn,
+.secondary-widgets-area .posts-tabs-widget .post-item .post-item-content .post-categories,
+.secondary-widgets-area .posts-tabs-widget .post-item .post-item-content .post-exerpt,
+.secondary-widgets-area .posts-tabs-widget .post-item .post-item-content .post-btn,
+.express-list-widget .post-item:not(:first-child) .post-item-content .post-categories,
+.express-list-widget .post-item:not(:first-child) .post-item-content .post-exerpt {
+	display: none;
+}
+
+.express-list-widget .post-item:not(:first-child) .post-item-content .post-btn {
+	display: none;
+}
+
+.express-list-widget .post-item.post-list,
+.express-list-widget .post-item.post-list:nth-child(even) {
+	flex-direction: row;
+}
+
+#secondary .express-list-widget .post-item.post-list .post-item-content,
+.site-footer .express-list-widget .post-item.post-list .post-item-content,
+.secondary-widgets-area .express-list-widget .post-item.post-list .post-item-content,
+.primary-widgets-area .express-list-widget .post-item.post-list .post-item-content {
+	text-align: start;
+	width: 100%;
+}
+
+
+#secondary .express-list-widget .post-item.post-list .post-item-content .post-exerpt:last-child p,
+.site-footer .express-list-widget .post-item.post-list .post-item-content .post-exerpt:last-child p,
+.secondary-widgets-area .express-list-widget .post-item.post-list .post-item-content .post-exerpt:last-child p,
+.primary-widgets-area .express-list-widget .post-item.post-list .post-item-content .post-exerpt:last-child p {
+	margin-bottom: 0;
+}
+
+#secondary .express-list-widget .post-item.post-list .post-item-content .entry-meta,
+.site-footer .express-list-widget .post-item.post-list .post-item-content .entry-meta,
+.secondary-widgets-area .express-list-widget .post-item.post-list .post-item-content .entry-meta,
+.primary-widgets-area .express-list-widget .post-item.post-list .post-item-content .entry-meta {
+	justify-content: flex-start;
+}
+
+#secondary .express-list-widget .post-item.post-list .post-item-content .entry-cat .post-categories,
+.site-footer .express-list-widget .post-item.post-list .post-item-content .entry-cat .post-categories,
+.secondary-widgets-area .express-list-widget .post-item.post-list .post-item-content .entry-cat .post-categories,
+.primary-widgets-area .express-list-widget .post-item.post-list .post-item-content .entry-cat .post-categories {
+	justify-content: flex-start;
+}
+
+#secondary .express-list-widget .express-list-widget-wrapper,
+.site-footer .express-list-widget .express-list-widget-wrapper,
+.secondary-widgets-area .express-list-widget .express-list-widget-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+#secondary .express-list-widget .express-list-widget-wrapper .post-item:first-child,
+.site-footer .express-list-widget .express-list-widget-wrapper .post-item:first-child,
+.secondary-widgets-area .express-list-widget .express-list-widget-wrapper .post-item:first-child {
+	grid-column: span 1;
+	flex-direction: column;
+}
+
+#secondary .express-list-widget .express-list-widget-wrapper .post-item:first-child .post-item-image a img,
+.site-footer .express-list-widget .express-list-widget-wrapper .post-item:first-child .post-item-image a img,
+.secondary-widgets-area .express-list-widget .express-list-widget-wrapper .post-item:first-child .post-item-image a img {
+	aspect-ratio: 1/0.7;
+}
+
+.above-footer-widget-section .express-list-widget .express-list-widget-wrapper .post-item:first-child,
+.main-widget-section-wrap.full-width .express-list-widget .express-list-widget-wrapper .post-item:first-child {
+	grid-column: span 1;
+	grid-row: span 4;
+}
+
+@media (max-width: 600px) {
+	.express-list-widget .express-list-widget-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.express-list-widget .express-list-widget-wrapper .post-item:first-child {
+		grid-column: span 1;
+		flex-direction: column;
+	}
+
+	.express-list-widget .express-list-widget-wrapper .post-item:first-child .post-item-image a img {
+		aspect-ratio: 1/0.7;
+	}
+}
+
+/* express-list-widget style-2 */
+.express-list-widget.style-2 .post-item.overlay-post {
+	padding: 0;
+}
+
+#secondary .express-list-widget.style-2 .post-item.overlay-post,
+.site-footer .express-list-widget.style-2 .post-item.overlay-post,
+.secondary-widgets-area .express-list-widget.style-2 .post-item.overlay-post {
+	min-height: 280px;
+}
+
+.express-list-widget.style-2 .post-item.overlay-post .post-item-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.express-list-widget.style-2 .post-item.overlay-post .post-item-image::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0)), color-stop(80%, rgba(17, 17, 17, 0.6)), to(#111111));
+	background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.6) 80%, #111111 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	z-index: 2;
+}
+
+.express-list-widget.style-2 .post-item.overlay-post .post-item-content {
+	position: relative;
+	z-index: 3;
+	padding: 20px;
+}
+
+.express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-btn a,
+.express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-exerpt p {
+	color: #fff;
+}
+
+#secondary .express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-btn,
+.site-footer .express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-btn,
+.secondary-widgets-area .express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-btn,
+#secondary .express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-exerpt,
+.site-footer .express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-exerpt,
+.secondary-widgets-area .express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-exerpt {
+	display: none;
+}
+
+.express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-btn a i::before {
+	background-color: #fff;
+}
+
+.express-list-widget.style-2 .post-item.overlay-post .post-item-content .post-btn a i::after {
+	border: 1px solid #fff;
+	border-bottom: 0;
+	border-left: 0;
+}
+
+/* express-list-widget style-2 */
+
+/* End Express List Widget
+--------------------------------------------- */
